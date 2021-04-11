@@ -3,14 +3,14 @@ body{
 }
 
 .wrapper {
-    position: sticky;
+    position: absolute;
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
 }
 
 .video{
-    position: sticky;
+    position: absolute;
     text-align: center;
     top: 50%;
     left:50%;
@@ -20,7 +20,7 @@ body{
 
 .bow{
 
-    position: sticky;
+    position: absolute;
      text-align: center;
      top: 60%;
      right: 30.5%; 
