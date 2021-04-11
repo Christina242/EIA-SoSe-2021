@@ -1,0 +1,27 @@
+body{
+    background-image: url(bg2.png);
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.video{
+    position:absolute;
+    text-align: center;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
+
+.bow{
+
+    position: absolute;
+     text-align: center;
+     top: 60%;
+     right: 30.5%; 
+ }
