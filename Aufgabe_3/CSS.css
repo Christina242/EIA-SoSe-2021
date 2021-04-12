@@ -18,7 +18,7 @@ margin-top: 0%;
     height: 300px;
     border-bottom-right-radius: 1000px;
     border-bottom-left-radius: 1000px;
-    width: 800px;
+    width: 630px;
     margin: auto;
     position: relative;
 }
@@ -73,12 +73,12 @@ margin-top: 0%;
     font-family: initial;
     font-style: italic;    
     margin-top: -80px;
-    padding-left: 150px;
+    padding-left: 120px;
     height: 60px;
 }
 
 .socials {
-    margin-left: -100px;
+    margin-left: -132px;
 }
 
 .icon {
