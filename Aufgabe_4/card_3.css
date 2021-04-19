@@ -2,26 +2,28 @@ body{
     background-image: url(bg2.png);
 }
 
-.wrapper {
+#karte {
     position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
 }
+
+.wrapper {
+    margin: auto;
+    margin-top: 160px;
+    margin-left: 420px;
+}
+
 
 .video{
     position: absolute;
     text-align: center;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    display: inline-block;
+    left: 43.5%;
+    bottom: 8%;
 }
 
 .bow{
 
     position: absolute;
      text-align: center;
-     top: 60%;
-     right: 30.5%; 
+     top: 76.5%;
+     right: 0%; 
  }
