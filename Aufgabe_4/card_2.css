@@ -2,25 +2,29 @@ body{
     background-image: url(bg2.png);
 }
 
+#karte{
+    position: absolute;
+}
+
 .wrapper {
     position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    margin-top: 160px;
+    margin-left: 420px;
 }
 
 h1 {
+    position: absolute;
     font-style: italic;
     color: white;
     font-family: initial;
-    top: 25%;
-    right: 55%;
-    position: absolute;
+    top: 180px;
+    left: 500px;
 }
 
 form { 
     position: absolute;
-   padding: 260px 590px;
+   padding: 252px 525px;
     font-family: Arial, Helvetica, sans-serif;
     color:white;
     font-style: arial;

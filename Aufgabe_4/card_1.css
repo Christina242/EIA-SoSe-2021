@@ -1,24 +1,27 @@
 body {
     background-image: url(bg.png);
 }
+#karte {
+    position: absolute;
+    text-align: center;
+}
 
 img {
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    margin-top: 160px;
+    margin-left: 420px;
 }
 
 .shell {
     position: absolute;
-    top: 70%;
-    left: 34%;
+    top: 52%;
+    left: -3%;
 }
 
 .penguin {
     position:absolute;
-    right: 33%;
-    top: 63%;
+    right: -5%;
+    top: 43%;
 }
 
 h1 {
@@ -26,8 +29,8 @@ h1 {
     color: white;
     font-family: initial;
     position: absolute;
-    top: 27%;
-    right: 37%;
+    top: 34%;
+    right: 10%;
 }
 
 .Furtwangen {
@@ -35,8 +38,8 @@ h1 {
     color: white;
     font-family: initial;
     position: absolute;
-    top: 33%;
-    right: 40%; 
+    top: 42%;
+    right: 20%; 
 }
 
 p {
@@ -44,8 +47,9 @@ p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    top: 40%;
-    left: 37%;
+    text-align: center;
+    top: 53%;
+    left: 62%;
 }
 
 .main {
@@ -53,6 +57,6 @@ p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    top: 45%;
-    left: 37%;
+    top: 60%;
+    left: 50%;
 }
