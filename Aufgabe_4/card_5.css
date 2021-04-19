@@ -2,11 +2,14 @@ body {
     background-image: url(bg2.png);
 }
 
-.img {
+#karte{
     position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+}
+
+.img {
+    margin: auto;
+    margin-top: 160px;
+    margin-left: 420px;
 }
 
 p {
@@ -16,15 +19,15 @@ p {
     text-align: center;
     font-size: 30px;
     top: 30%;
-    left: 41%;
+    left: 55%;
 }
 
 .muschel1 {
     width: 70px;
     height: 65px;
     background: url("muschel.png") no-repeat;
-    right: 48%;
-    top: 42%;
+    right: 25%;
+    top: 75%;
     position: absolute;
     display: inline-block;
 }
@@ -37,8 +40,8 @@ p {
     width: 70px;
     height: 65px;
     background: url("muschel.png") no-repeat;
-    right: 55%;
-    top: 50%;
+    right: 40%;
+    top: 55%;
     position: absolute;
     display: inline-block;
 }
@@ -51,8 +54,8 @@ p {
     width: 70px;
     height: 65px;
     background: url("muschel.png") no-repeat;
-    right: 41%;
-    top: 50%;
+    right: 20%;
+    top: 55%;
     position: absolute;
     display: inline-block;
 }
