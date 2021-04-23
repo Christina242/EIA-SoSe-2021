@@ -13,32 +13,54 @@ var Australia2018: number = 2100.5;
 
 var total2018: number = Africa2018 + SouthAmerica2018 +Europe2018 + NorthAmerica2018 +Asia2018 + Australia2018;
 
-console.log("Die Emission von Europa 2018 ist: " + Europe2018 +" kg CO2");
-console.log("Relativ zur Gesamtemission der Welt verursacht Europa 2018 damit " + Europe2018*100/total2018 + "%");
-console.log("Für Europa hat sich 2018 im Vergleich zu 2008 die Emission um " + (Europe2018-Europe2008)*100/ Europe2008 + " % verändert");
-console.log("2018 im Vergleich zu 2008 sind das " + (Europe2018-Europe2008) + "kg CO2");
+var totalEurope2018 = Math.round(Europe2018 * 100 / total2018);
+var totalNorthAmerica2018 = Math.round(NorthAmerica2018 *100 / total2018);
+var totalSouthAmerica2018 = Math.round(SouthAmerica2018 *100 / total2018);
+var totalAfrica2018 = Math.round(Africa2018 *100/ total2018);
+var totalAsia2018 = Math.round(Asia2018 *100 / total2018);
+var totalAustralia2018 = Math.round(Australia2018 *100/ total2018);
 
-console.log("Die Emission von Nordamerika 2018 ist: " + NorthAmerica2018 +" kg CO2");
-console.log("Relativ zur Gesamtemission der Welt verursacht Nordamerika 2018 damit " + NorthAmerica2018*100/total2018 + "%");
-console.log("Für Nordamerika hat sich 2018 im Vergleich zu 2008 die Emission um " + (NorthAmerica2018-NorthAmerica2008)*100/ NorthAmerica2008 + " % verändert");
-console.log("2018 im Vergleich zu 2008 sind das " + (NorthAmerica2018-NorthAmerica2008) + "kg CO2");
+var Europe2008_18 = Math.round (( Europe2018 - Europe2008 ) *100 / Europe2008);
+var NorthAmerica2008_18 = Math.round (( NorthAmerica2018 - NorthAmerica2008 ) *100 / NorthAmerica2008);
+var SouthAmerica2008_18 = Math.round (( SouthAmerica2018 - SouthAmerica2008 ) *100 /SouthAmerica2008);
+var Africa2008_18 = Math.round ((Africa2018 - Africa2008 ) *100 / Africa2008);
+var Asia2008_18 = Math.round (( Asia2018 - Asia2008 ) *100 / Asia2008);
+var Australia2008_18 = Math.round ((Australia2018 - Australia2008) *100 / Australia2008);
 
-console.log("Die Emission von Südamerika 2018 ist: " + SouthAmerica2018 +" kg CO2");
-console.log("Relativ zur Gesamtemission der Welt verursacht Südamerika 2018 damit " + SouthAmerica2018*100/total2018 + "%");
-console.log("Für Südamerika hat sich 2018 im Vergleich zu 2008 die Emission um " + (SouthAmerica2018-SouthAmerica2008)*100/ SouthAmerica2008 + " % verändert");
-console.log("2018 im Vergleich zu 2008 sind das " + (SouthAmerica2018-SouthAmerica2008) + "kg CO2");
+var europe_2008_2018_abs = Math.round (Europe2018 - Europe2008);
+var northamerica_2008_2018_abs = Math.round (NorthAmerica2018 - NorthAmerica2008);
+var southamerica_2008_2018_abs = Math.round (SouthAmerica2018 - SouthAmerica2008);
+var africa2008_2018_abs = Math.round(Africa2018 - Africa2008);
+var asia2008_2018_abs = Math.round (Asia2018 - Asia2008);
+var australia_2008_2018_abs = Math.round(Australia2018 - Australia2008);
 
-console.log("Die Emission von Afrika 2018 ist: " + Africa2018 +" kg CO2");
-console.log("Relativ zur Gesamtemission der Welt verursacht Afrika 2018 damit " + Africa2018*100/total2018 + "%");
-console.log("Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission um " + (Africa2018-Europe2008)*100/ Africa2008 + " % verändert");
-console.log("2018 im Vergleich zu 2008 sind das " + (Africa2018-Africa2008) + "kg CO2");
+console.log ("Die Emission von Europa ist " + Europe2018 + " kg CO2")
+console.log ("Relativ zur Gesamtemission der Welt verursacht Europa damit " + totalEurope2018 + " %" )
+console.log ("Für Europa hat sich 2018 im Vergleich zu 2008 die Emission um " + Europe2008_18 + " % verändert")
+console.log ("2018 im Vergleich zu 2008 sind das " + europe_2008_2018_abs + " kg CO2")
 
-console.log("Die Emission von Asien 2018 ist: " + Asia2018 +" kg CO2");
-console.log("Relativ zur Gesamtemission der Welt verursacht Asien 2018 damit " + Asia2018*100/total2018 + "%");
-console.log("Für Europa hat sich 2018 im Vergleich zu 2008 die Emission um " + (Asia2018-Asia2008)*100/ Asia2008 + " % verändert");
-console.log("2018 im Vergleich zu 2008 sind das " + (Asia2018-Asia2008) + "kg CO2");
+console.log ("Die Emission von Nordamerika ist " + NorthAmerica2018 + " kg CO2")
+console.log ("Relativ zur Gesamtemission der Welt verursacht Nordamerika damit " + totalNorthAmerica2018 + " %" )
+console.log ("Für Nordamerika hat sich 2018 im Vergleich zu 2008 die Emission um " + NorthAmerica2008_18 + " % verändert")
+console.log ("2018 im Vergleich zu 2008 sind das " + northamerica_2008_2018_abs + " kg CO2")
 
-console.log("Die Emission von Austalien 2018 ist: " + Australia2018 +" kg CO2");
-console.log("Relativ zur Gesamtemission der Welt verursacht Austarlien 2018 damit " + Australia2018*100/total2018 + "%");
-console.log("Für Europa hat sich 2018 im Vergleich zu 2008 die Emission um " + (Australia2018-Asia2008)*100/ Australia2008 + " % verändert");
-console.log("2018 im Vergleich zu 2008 sind das " + (Australia2018-Australia2008) + "kg CO2");
+console.log ("Die Emission von Südamerika ist " + SouthAmerica2018 + " kg CO2")
+console.log ("Relativ zur Gesamtemission der Welt verursacht Südamerika damit " + totalSouthAmerica2018 + " %" )
+console.log ("Für Südamerika hat sich 2018 im Vergleich zu 2008 die Emission um " + SouthAmerica2008_18 + " % verändert")
+console.log ("2018 im Vergleich zu 2008 sind das " + southamerica_2008_2018_abs + " kg CO2")
+
+console.log ("Die Emission von Africa ist " + Africa2018 + " kg CO2")
+console.log ("Relativ zur Gesamtemission der Welt verursacht Afrika damit " + totalAfrica2018 + " %" )
+console.log ("Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission um " + Africa2008_18 + " % verändert")
+console.log ("2018 im Vergleich zu 2008 sind das " + africa2008_2018_abs + " kg CO2")
+
+console.log ("Die Emission von Asien ist " + Asia2018 + " kg CO2")
+console.log ("Relativ zur Gesamtemission der Welt verursacht Asien damit " + totalAsia2018 + " %" )
+console.log ("Für Asien hat sich 2018 im Vergleich zu 2008 die Emission um " + Asia2008_18 + " % verändert")
+console.log ("2018 im Vergleich zu 2008 sind das " + asia2008_2018_abs + " kg CO2")
+
+console.log ("Die Emission von Australien ist " + Australia2018 + " kg CO2")
+console.log ("Relativ zur Gesamtemission der Welt verursacht Australien damit " + totalAustralia2018 + " %" )
+console.log ("Für Australien hat sich 2018 im Vergleich zu 2008 die Emission um " + Australia2008_18 + " % verändert")
+console.log ("2018 im Vergleich zu 2008 sind das " + australia_2008_2018_abs + " kg CO2")
+
