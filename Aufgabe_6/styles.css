@@ -5,7 +5,7 @@ html, body {
     height: 100%;
     padding: 0;
     overflow: hidden;
-    background-image: radial-gradient(circle 100vw at left top,rgba(0,136,160,.5) 0,rgba(0,136,160,0) 100%),radial-gradient(circle 100vw at right center,rgba(247,105,6,.25) 0,rgba(247,105,6,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(0,136,160,.5) 0,rgba(0,136,160,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(247,105,6,.25) 0,rgba(247,105,6,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(0,136,160,.4) 0,rgba(0,136,160,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(247,105,6,.25) 0,rgba(247,105,6,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(0,136,160,.5) 0,rgba(0,136,160,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(247,105,6,.25) 0,rgba(247,105,6,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(0,136,160,.4) 0,rgba(0,136,160,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(247,105,6,.25) 0,rgba(247,105,6,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(0,136,160,.5) 0,rgba(0,136,160,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(247,105,6,.25) 0,rgba(247,105,6,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(0,136,160,.4) 0,rgba(0,136,160,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(247,105,6,.25) 0,rgba(247,105,6,0) 100%),radial-gradient(circle 100vw at left center,rgba(28,222,126,.2) 0,rgba(28,222,126,0) 100%),radial-gradient(circle 100vw at right center,rgba(0,136,160,.4) 0,rgba(0,136,160,0) 100%);
+    background-color: black;
 }
 
 nav {
@@ -18,19 +18,49 @@ section {
     width: 200px;
 }
 
+.europe:hover {
+    transform: scale(1.1);
+}
+
+.northamerica:hover {
+    transform: scale(1.1);
+}
+
+.southamerica:hover {
+    transform: scale(1.1);
+}
+
+.africa:hover {
+    transform: scale(1.1);  
+}
+
+.asia:hover {
+    transform: scale(1.1);
+}
+
+.australia:hover {
+    transform: scale(1.1);   
+}
+
 .chartWrapper {
     position: relative;
     display: inline-block;
     width: 50px;
     height: 100px;
-    background: rgba(255, 255, 255, 0.5);
+    box-shadow:  0 0 80px lightgreen;
+    border-radius: 6px;
+    border-width: thick 1px;
+    border-style: solid;
+    border-color: white;
+    background: transparent;;
 }
+
 .chartWrapper .chart {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 20%;
-    background:white;
+    background:lightgreen;
 }
 
 footer p {
