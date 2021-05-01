@@ -1,0 +1,197 @@
+body {
+    background-color: black;
+}
+
+
+.B1{
+  position: absolute;
+  left: 550px;
+  top: 60px;
+width: 150px;
+height: 150px;
+border-radius: 6px;
+border-width: 4px;
+background-color:  #4169e1;
+border-color: #000088;
+outline: none;
+}
+
+.B1:hover{
+border:none;
+padding: 10px;
+outline: none;
+
+}
+
+.B2{
+position: absolute;
+left: 710px;
+top: 60px;
+width: 150px;
+height: 150px;
+border-radius: 6px;
+background-color:  #4169e1;
+border-color: #000088;
+border-width: 4px;
+outline: none;
+}
+
+.B2:hover{ 
+border:none;
+padding: 10px;
+outline: none;
+}
+
+.B3{
+position: absolute;
+ left: 870px;
+ top: 60px;
+ width: 150px;
+ height: 150px;
+ background-color:  #4169e1;
+ border-color: #000088;
+ border-radius: 6px;
+ border-width: 4px;
+ outline: none;
+} 
+   
+.B3:hover{     
+border:none;
+padding: 10px;
+outline: none;
+ }
+    
+.B4{
+position: absolute;
+left: 550px;
+top: 220px;
+width: 150px;
+height: 150px;
+background-color:#fd7087;
+border-radius: 6px;
+border-color:#f3062d;
+border-width: 4px;
+outline: none;
+}
+              
+.B4:hover{          
+border:none;
+padding: 10px;
+outline: none;
+ }
+
+.B5{
+position: absolute;
+left: 710px;
+top: 220px;
+width: 150px;
+height: 150px;
+background-color:#fd7087;
+border-radius: 6px;
+border-color:#f3062d;
+border-width: 4px;
+outline: none;
+}
+                
+.B5:hover{
+            
+border:none;
+padding: 10px;
+outline: none;
+ }
+
+ .B6{
+
+position: absolute;
+left: 870px;
+top: 220px;
+width: 150px;
+height: 150px;
+background-color:#fd7087;
+border-radius: 6px;
+border-color:#f3062d;
+border-width: 4px;
+outline: none;
+
+}
+                
+               
+.B6:hover{
+                        
+border:none;
+padding: 10px;
+outline: none;
+}
+            
+.B7{
+
+position: absolute;
+left: 550px;
+top: 380px;
+width: 150px;
+height: 150px;
+background-color:#fd7087;
+border-radius: 6px;
+border-color:#f3062d;
+border-width: 4px;
+outline: none;
+}
+                                   
+.B7:hover{
+                            
+border:none;
+padding: 10px;
+outline: none;
+}
+
+.B8{
+
+position: absolute;
+left: 710px;
+top: 380px;
+width: 150px;
+height: 150px;
+background-color:#ff8800;
+border-radius: 6px;
+border-color:#be5504;
+border-width: 4px;
+outline: none;
+}                   
+                       
+.B8:hover{                               
+border:none;
+padding: 10px;
+outline: none;
+}
+         
+.B9{
+position: absolute;
+left: 870px;
+top: 380px;
+width: 150px;
+height: 150px;
+background-color:#ff8800;
+border-radius: 6px;
+border-color:#be5504;
+border-width: 4px;
+outline: none;
+}
+                            
+                           
+.B9:hover{
+                                    
+border:none;
+padding: 10px;
+outline: none;
+}
+
+.PlayB{
+
+  position: absolute;
+  top: 570px;
+  left: 718px;
+  width: 150px;
+  height: 150px;
+
+}
+
