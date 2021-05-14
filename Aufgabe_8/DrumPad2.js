@@ -17,7 +17,7 @@ var sequence = ["kick.mp3", "hihat.mp3", "snare.mp3", "hihat.mp3"];
 var kick;
 var record = false;
 function playSample(mp3) {
-    var sound = new Audio("assets/" + mp3);
+    var sound = new Audio(mp3);
     sound.play();
     if (record == true) {
         sequence.push(mp3);
@@ -55,22 +55,12 @@ function RecordTheBeat() {
     console.log("Recording beat");
 }
 var mp3 = ["kick.mp3", "hihat.mp3", "snare.mp3", "A.mp3", "C.mp3", "F.mp3", "G.mp3", "laugh-1.mp3", "laugh-2.mp3"];
-var sound = [];
-sound[0] = new Audio("kick.mp3");
-sound[1] = new Audio("hihat.mp3");
-sound[2] = new Audio("snare.mp3");
-sound[3] = new Audio("A.mp3");
-sound[4] = new Audio("C.mp3");
-sound[5] = new Audio("F.mp3");
-sound[6] = new Audio("G.mp3");
-sound[7] = new Audio("laugh-1.mp3");
-sound[8] = new Audio("laugh-2.mp3");
 var i = 0;
 function RemixBeat() {
     sequence.length = 0;
-    for (var i_1 = 0; i_1 < 9; i_1++) {
-        var sound_1 = Math.floor(Math.random() * 9);
-        sound_1.push(sound_1);
+    for (i = 0; i < 9; i++) {
+        var i_1 = Math.floor(Math.random() * 9);
+        mp3.push(i_1);
         console.log("Remix beat");
     }
 }
