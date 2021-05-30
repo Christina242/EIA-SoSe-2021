@@ -8,10 +8,10 @@ function AddTaskText() {
     console.log(newtask);
     addTaskToList(newtask);
     var element = document.querySelector(".Rahmen");
-    var numberofChildren = element.children.length;
-    taskcounter = numberofChildren;
-    console.log("Die Anzahl der To-Dos lautet:" + numberofChildren);
-    document.querySelector(".items").innerHTML = numberofChildren + " in total";
+    var numberofTasks = element.Tasks.length;
+    taskcounter = numberofTasks;
+    console.log("Die Anzahl der To-Dos lautet:" + numberofTasks);
+    document.querySelector(".items").innerHTML = numberofTasks + " in total";
 }
 function addTaskToList(newTaskValue) {
     var addElement = document.createElement("div");
@@ -30,8 +30,8 @@ function DeleteTaskText(ClickedTrash) {
     ClickedTrash.parentElement.remove();
     taskcounter--;
     var element = document.querySelector(".Rahmen");
-    var numberofChildren = element.children.length;
-    document.querySelector(".items").innerHTML = numberofChildren + " in total";
+    var numberofTasks = element.Tasks.length;
+    document.querySelector(".items").innerHTML = numberofTasks + " in total";
 }
 function CheckedButton(ClickedButton) {
     if (ClickedButton.classList.contains("fa-circle")) {

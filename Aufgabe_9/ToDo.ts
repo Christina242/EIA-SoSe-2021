@@ -10,10 +10,10 @@ function AddTaskText(): void {
     console.log(newtask);
     addTaskToList(newtask);
     let element = document.querySelector(".Rahmen");
-    let numberofChildren = element.children.length;
-    taskcounter = numberofChildren;
-    console.log("Die Anzahl der To-Dos lautet:" + numberofChildren);
-    document.querySelector(".items").innerHTML = numberofChildren + " in total";
+    let numberofTasks = element.Tasks.length;
+    taskcounter = numberofTasks;
+    console.log("Die Anzahl der To-Dos lautet:" + numberofTasks);
+    document.querySelector(".items").innerHTML = numberofTasks + " in total";
 }
 
 function addTaskToList(newTaskValue: string): void {
@@ -34,8 +34,8 @@ function DeleteTaskText(ClickedTrash): void {
     ClickedTrash.parentElement.remove();
     taskcounter--;
     let element = document.querySelector(".Rahmen");
-    let numberofChildren = element.children.length;
-    document.querySelector(".items").innerHTML = numberofChildren + " in total";
+    let numberofTasks = element.Tasks.length;
+    document.querySelector(".items").innerHTML = numberofTasks + " in total";
 }
 
 function CheckedButton(ClickedButton): void {
@@ -47,3 +47,4 @@ function CheckedButton(ClickedButton): void {
         ClickedButton.classList.add("fa-circle");
     }
 }
+
