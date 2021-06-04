@@ -1,188 +1,128 @@
-/**
- * Die ToDos werden in dem Array todosText gespeichert
- * Jedes ToDo hat aber, neben dem ToDo-Text, einen zweiten
- * Wert, nämlich ob es erledigt ist oder nicht
- * (checked / unchecked). Der Einsatz von einem eindimensionalen
- * Array ermöglicht aber nur, dass wir ein Wert nach dem anderen auflisten.
- * Den zweiten Wert zu einem ToDo speichern wir also in einem
- * zweiten Array. Beide Arrays beinhalten also Infos zu einem ToDo,
- * den ToDo-Text und den Erledigtstatus eines ToDos. Die entsprechende
- * Stelle eines ToDos zeigt jetzt in den Arrays auf die entsprechenden
- * Werte, bspw. Stelle 0 im Array todosText und Stelle 0 im Array
- * todosChecked gehören zusammen zu einem ToDo.
- */
-var todos = {
-    tasks: ["Lorem", "Ipsum", "Dolor"],
-    status: [true, false, false]
-};
-/**
- * Die Anwendung wird immer wieder auf die selben
- * DOM-Elemente zugreifen müssen. Damit diese Elemente nicht
- * jedes mal neu selektiert werden müssen, werden hier
- * Variablen deklariert, die später die entsprechenden DOM-Elemente
- * speichern.
- */
-var inputDOMElement;
-var addButtonDOMElement;
-var todosDOMElement;
-var counterDOMElement;
-/** new var */
-var openDOMElement;
-var doneDOMElement;
-/**
- * Sobald der DOM geladen wurde können grundlegende DOM-Interaktionen
- * initialisiert werden
- */
-window.addEventListener("load", function () {
-    /**
-     * Jetzt da der DOM verfügbar ist können die wichtigsten Elemente
-     * in ihre Variablen gespeichert werden, um später auf sie
-     * zugreifen zu können
-     */
-    inputDOMElement = document.querySelector("#inputTodo");
-    addButtonDOMElement = document.querySelector("#addButton");
-    todosDOMElement = document.querySelector("#todos");
-    counterDOMElement = document.querySelector("#counter");
-    /** newdoc*/
-    openDOMElement = document.querySelector("#open");
-    doneDOMElement = document.querySelector("#done");
-    /**
-     * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
-     * auf den AddToDo Button gesetzt werden.
-     */
-    addButtonDOMElement.addEventListener("click", addTodo);
-    /**
-     * Initial soll einmal die Liste an bereit definierten ToDos
-     * aus den Arrays in den DOM gezeichnet werden.
-     */
-    drawListToDOM();
-});
-function drawListToDOM() {
-    // alle todos erst einmal aus dem DOM löschen
-    todosDOMElement.innerHTML = "";
-    var _loop_1 = function (index) {
-        /**
-         * Neues DIV-Element erstellen (würde auch mit innerHTML = "<div class='todo'></div>" gehen,
-         * die Objekt-Instansierung ist aber übersichtlicher)
-         */
-        var todo = document.createElement("div");
-        todo.classList.add("todo");
-        /**
-         * Jedes Todo besteht aus etwas Markup, also aus HTML-Elementen
-         * wie der Check-Anzeige, dem ToDo-Text und dem Mülleimer
-         *
-         * Einfachheitshalber werden hier alle HTML-Elemente für ein ToDo
-         * nicht DOM-Objekt-weise (wie oben, mit createElement), sondern als eine lange
-         * HTML-Zeichenkette erstellt. An manchen Stellen der Zeichenkette wird
-         * ein Wert einer Variablen benötigt (bspw. für die CSS Klasse oder für den ToDo-Text),
-         * hier muss die Zeichenkette unterbrochen werden.
-         */
-        todo.innerHTML = "<span class='check " + todos.status[index] + "'><i class='fas fa-check'></i></span>"
-            + todos.tasks[index] +
-            "<span class='trash fas fa-trash-alt'></span>";
-        // Zuweisen der Event-Listener für den Check- und den Trash-Button
-        todo.querySelector(".check").addEventListener("click", function () {
-            // hier wird der Index, also die aktuelle Stelle im Array dieses ToDos,
-            // übergeben, damit an der entsprechenden Stelle im Array der Wert geändert werden kann.
-            toggleCheckState(index);
-        });
-        todo.querySelector(".trash").addEventListener("click", function () {
-            // hier wird der Index, also die aktuelle Stelle im Array dieses ToDos,
-            // übergeben, damit die entsprechende Stelle im Array gelöscht werden kann.
-            deleteTodo(index);
-        });
-        // Bis hier hin wurde das neue Todo "zusammengebaut", jetzt wird es in den DOM gerendert.
-        todosDOMElement.appendChild(todo);
-        todosDOMElement.insertBefore(todo, todosDOMElement.childNodes[0]);
-    };
-    // das ToDo-Array durchlaufen (iterieren) und Todo für Todo in den DOM schreiben
-    for (var index = 0; index < todos.tasks.length; index++) {
-        _loop_1(index);
-    }
-    updateCounter();
-}
-function updateCounter() {
-    var open = 0;
-    var done = 0;
-    for (var i = 0; i < todos.status.length; i++) {
-        if (todos.status[i] == true) {
-            done++;
+var aufgabe10;
+(function (aufgabe10) {
+    var newArray = [
+        {
+            content: "Lorem",
+            checked: false
+        },
+        {
+            content: "Ipsum",
+            checked: false
+        },
+        {
+            content: "Dolor",
+            checked: true
         }
-        else {
-            todos.status[i] != true;
-            open++;
+    ];
+    window.addEventListener("click", function () {
+        var artyom = new Artyom();
+        function startContinuousArtyom() {
+            artyom.fatality();
+            setTimeout(function () {
+                artyom.initialize({
+                    lang: "de-DE",
+                    continuous: true,
+                    listen: true,
+                    interimResults: true,
+                    debug: true
+                }).then(function () {
+                    console.log("Ready!");
+                });
+            }, 250);
+        }
+        startContinuousArtyom();
+        artyom.addCommands({
+            indexes: ["erstelle Aufgabe *"],
+            smart: true,
+            action: function (i, wildcard) {
+                newArray.unshift({
+                    content: wildcard,
+                    checked: false
+                });
+                drawListToDOM();
+                console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            }
+        });
+        document.querySelector("#button").addEventListener("click", function () {
+            artyom.say("Spracheingabe ist aktiviert");
+            startContinuousArtyom();
+        });
+    });
+    var inputDOMElement;
+    var addButtonDOMElement;
+    var todosDOMElement;
+    var counterDOMElement;
+    var doneDOMElement;
+    var openDOMElement;
+    window.addEventListener("load", function () {
+        inputDOMElement = document.querySelector("#inputTodo");
+        addButtonDOMElement = document.querySelector("#addButton");
+        todosDOMElement = document.querySelector("#todos");
+        counterDOMElement = document.querySelector("#counter");
+        doneDOMElement = document.querySelector("#done");
+        openDOMElement = document.querySelector("#open");
+        addButtonDOMElement.addEventListener("click", addTodo);
+        drawListToDOM();
+    });
+    function drawListToDOM() {
+        todosDOMElement.innerHTML = "";
+        var _loop_1 = function (index_1) {
+            var todo = document.createElement("div");
+            todo.classList.add("todo");
+            todo.innerHTML = "<span class='check " + newArray[index_1].checked + "'><i class='fas fa-check'></i></span>"
+                + newArray[index_1].content +
+                "<span class='trash fas fa-trash-alt'></span>";
+            todo.querySelector(".check").addEventListener("click", function () {
+                toggleCheckState(index_1);
+            });
+            todo.querySelector(".trash").addEventListener("click", function () {
+                deleteTodo(index_1);
+            });
+            todosDOMElement.appendChild(todo);
+        };
+        for (var index_1 = 0; index_1 < newArray.length; index_1++) {
+            _loop_1(index_1);
+        }
+        updateCounter();
+        taskDone();
+        taskOpen();
+    }
+    function updateCounter() {
+        counterDOMElement.innerHTML = newArray.length + " in total";
+    }
+    function taskDone() {
+        var done = 0;
+        for (var index = 0; index < newArray.length; index++) {
+            if (newArray[index].checked == true)
+                done++;
+        }
+        doneDOMElement.innerHTML = done + " done";
+    }
+    function taskOpen() {
+        var open = 0;
+        for (var index = 0; index < newArray.length; index++) {
+            if (newArray[index].checked == false)
+                open++;
+        }
+        openDOMElement.innerHTML = open + " open";
+    }
+    function addTodo() {
+        if (inputDOMElement.value != "") {
+            newArray.unshift({
+                content: inputDOMElement.value,
+                checked: false
+            });
+            inputDOMElement.value = "";
+            drawListToDOM();
         }
     }
-    counterDOMElement.innerHTML = todos.tasks.length + " in total | " + open + " open | " + done + " done";
-}
-/**
- * Ein neues ToDo wird folgendermaßen erstellt:
- */
-function addTodo() {
-    /**
-     * Zunächst wird geprüft, ob das Input-Feld nicht leer ist
-     * (ansonsten würde ein leerer ToDo-Text erstellt werden,
-     * wenn man, ohne zu Tippen, den Add-Button gedrückt hätte)
-     */
-    if (inputDOMElement.value != "") {
-        /**
-         * Der Eingabe-Wert aus dem Input-Feld (.value) wird
-         * als neues Element in das ToDo-Array gepusht.
-         * Gleichzeitig wird in ein zweites Array, das den Checked- / Uncheck-
-         * Status der ToDos abbildet, für dieses ToDo (weil selbe Stelle im Array)
-         * der Status "unchecked", hier false, gepusht.
-         */
-        todos.tasks.push(inputDOMElement.value);
-        todos.status.push(false);
-        // Jetzt wird der Text aus dem Eingabefeld gelöscht
-        inputDOMElement.value = "";
-        /**
-         * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
-         * wird wieder getriggert
-         */
+    function toggleCheckState(index) {
+        newArray[index].checked = !newArray[index].checked;
         drawListToDOM();
     }
-}
-/**
- * Der check- / unchecked Zustand eines ToDo wird wie folgt gesetzt:
- */
-function toggleCheckState(index) {
-    /**
-     * Das Array, , das den Checked- / Uncheck-Status der ToDos abbildet,
-     * muss an jener Stelle, an der das entsprechende ToDo steht (nämlich
-     * an der übergebenen Index-Stelle) geändert werden.
-     * Von checked zu unchecked bzw. von unchecked zu checked
-     * Hier wird ein Boolean für den Zustand checked/unchecked genutzt,
-     * der Boolean muss also von true zu false bzw. false zu true gestellt werden.
-     * Ein toggle (also Welchseln zwischen zwei Zuständen) lässt sich folgendermaßen
-     * kurz schreiben: wert = !wert
-     * Bedeutet: der Wert soll das Gegenteil von seinem Wert annehmen.
-     * Alternativ könnte man hier natürlich auch andere Schreibweisen (wie sie im
-     * Kurs behandelt wurden) nutzen.
-     */
-    todos.status[index] = !todos.status[index];
-    /**
-     * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
-     * wird wieder getriggert
-     */
-    drawListToDOM();
-}
-/**
- * Diese Funktion löscht ein ToDo
- */
-function deleteTodo(index) {
-    /**
-     * Durch "index" ist die entsprechende Stelle im Array
-     * bekannt, an der das ToDo steht.
-     * Jetzt muss diese Stelle beider Arrays gelöscht werden,
-     * das ToDo-Text-Array und das Checked/Unchecked-Array
-     */
-    todos.tasks.splice(index, 1);
-    todos.status.splice(index, 1);
-    /**
-     * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
-     * wird wieder getriggert
-     */
-    drawListToDOM();
-}
+    function deleteTodo(index) {
+        newArray.splice(index, 1);
+        drawListToDOM();
+    }
+})(aufgabe10 || (aufgabe10 = {}));
 //# sourceMappingURL=script.js.map
